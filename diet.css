@@ -26,12 +26,12 @@ header p {
 }
 
 /* Diet Cards */
-/* .diet-container {
+.diet-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 30px;
-} */
+}
 
 /* .diet-card {
     background: rgba(255, 255, 255, 0.1);
