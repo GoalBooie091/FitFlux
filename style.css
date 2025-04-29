@@ -1,5 +1,5 @@
 /* Set a beautiful fitness-themed background */
-/* body {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -16,7 +16,7 @@
     gap: 20px;
     padding: 50px;
   }
-   */
+  
   /* Individual card styling */
   .exercise-card {
     background: rgba(255, 255, 255, 0.15);
