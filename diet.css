@@ -14,26 +14,26 @@ body {
     padding: 50px 20px;
     background: rgba(0, 0, 0, 0.6);
     margin-bottom: 30px;
-}
+} */
 
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-} */
+}
 
 header p {
     font-size: 1.2rem;
 }
 
 /* Diet Cards */
-.diet-container {
+/* .diet-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 30px;
-}
+} */
 
-.diet-card {
+/* .diet-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -45,7 +45,7 @@ header p {
 .diet-card:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-}
+} */
 
 .diet-card img {
     width: 100%;
