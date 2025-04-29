@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normal Weight - Muscle Gain Diet Plan</title>
+  <link rel="stylesheet" href="dietstyle.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Normal Weight + Muscle Gain 🏋️</h1>
+    <!-- <p>Building lean muscle requires a high-protein diet, with moderate carbs and fats. Resistance training should accompany this plan for maximum results.</p> -->
+    <!-- <p>🛒 Foods: Salmon, tuna, cottage cheese, sweet potatoes, whey protein, broccoli, peanut butter.</p> -->
+    <a href="recommodation.html" class="button-home">⬅️ Back to Diet Selection</a>
+  </div>
+</body>
+</html>
