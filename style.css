@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .form-panel {
+    width: 40%;
+    background: linear-gradient(to right, #e8f0ff, #f7faff);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .form-panel h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    color: #111;
+  }
+  
+  .form-panel p {
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, select {
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.2s border ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #3366ff;
+    outline: none;
+  }
+  
+  button {
+    padding: 14px;
+    margin-top: 16px;
+    font-size: 1rem;
+    background-color: #3366ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #254edb;
+  }
+  
+  .image-panel {
+    width: 60%;
+    background: url("A_promotional_digital_graphic_design_for_a_persona.png") no-repeat center center/cover;
+  }
+  
