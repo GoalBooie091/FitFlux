@@ -1,5 +1,5 @@
 /* General Body Styling */
-body {
+/* body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff; /* Default font color */
-}
+} */
 
 /* Background overlays to improve readability */
 body::before {

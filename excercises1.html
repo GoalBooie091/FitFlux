@@ -4,7 +4,84 @@ TYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitFlux - Exercises</title>
-    <link rel="stylesheet" href="exersises.css"> <!-- Linking the CSS file -->
+  <style>
+    /* Set a beautiful fitness-themed background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?crop=entropy&cs=tinysrgb&fit=crop&w=1600&h=900') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    color: #fff;
+  }
+  
+  /* Container for all exercise cards */
+  .exercises-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  /* Individual card styling */
+  .exercise-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  /* On hover: slight zoom and colorful background */
+  .exercise-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+  }
+  
+  /* Image styling */
+  .exercise-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.1); /* soft background */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease, filter 0.3s ease;
+  }
+  
+  /* On hover - image zooms in smoothly */
+  .exercise-card:hover img {
+    transform: scale(1.1); /* Zooms the image */
+    filter: brightness(1.2); /* Brightens it */
+  }
+  
+  
+  
+  
+  /* Image color change on hover */
+  .exercise-card:hover img {
+    filter: brightness(1.2);
+  }
+  
+  /* Title */
+  .exercise-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  /* Paragraph */
+  .exercise-card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+  }
+  
+  </style>
 </head>
 <body>
 
