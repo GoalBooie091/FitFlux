@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background: #2d89e3;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.diet-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.diet-selection label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.diet-selection select, .diet-selection button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.diet-selection button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.diet-selection button:hover {
+    background-color: #45a049;
+}
+
+.diet-result {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 10px;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2d89e3;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
