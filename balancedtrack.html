@@ -74,13 +74,13 @@
       };
 
       // Generate the tracker sections for each day
-      for (let day = 1; day <= 7; day++) {
-        let mealsHTML = balancedMeals[day].map(meal => `
-          <div class="mb-4">
-            <label class="block text-gray-700 font-medium">${meal.name} - ${meal.description}</label>
-            <input type="text" id="balanced${day}_${meal.name}" class="w-full p-2 border rounded-lg" placeholder="Enter servings/quantity for ${meal.name}">
-          </div>
-        `).join('');
+      // for (let day = 1; day <= 7; day++) {
+      //   let mealsHTML = balancedMeals[day].map(meal => `
+      //     <div class="mb-4">
+      //       <label class="block text-gray-700 font-medium">${meal.name} - ${meal.description}</label>
+      //       <input type="text" id="balanced${day}_${meal.name}" class="w-full p-2 border rounded-lg" placeholder="Enter servings/quantity for ${meal.name}">
+      //     </div>
+      //   `).join('');
 
         tracker.innerHTML += `
         <div class="bg-white p-6 rounded-xl shadow">
