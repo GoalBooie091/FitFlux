@@ -60,10 +60,10 @@ Diet Info Section
     padding-bottom: 10px;
 }
 
-/* .diet-info ul {
+.diet-info ul {
     list-style-type: square;
     padding-left: 20px;
-} */
+}
 
 .diet-info p {
     line-height: 1.8;
@@ -71,14 +71,14 @@ Diet Info Section
 }
 
 /* Diet Chart Image */
-.diet-chart {
+/* .diet-chart {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+} */
 
 .diet-chart:hover {
     transform: scale(1.03);
