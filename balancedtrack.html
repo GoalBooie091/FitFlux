@@ -120,13 +120,13 @@
 
     <div id="history" class="mt-8 space-y-4"></div>
 
-    <!-- <script>
+    <script>
       function viewHistory() {
         const history = document.getElementById('history');
         history.innerHTML = '<h3 class="text-xl font-bold text-gray-800 mb-4">Balanced Diet History</h3>';
         for (let day = 1; day <= 7; day++) {
           const data = JSON.parse(localStorage.getItem(`balanced_day${day}`));
-          if (data) { -->
+          if (data) {
             let mealDetails = Object.keys(data).map(meal => {
               return `<strong>${meal}:</strong> ${data[meal]} servings/quantity`;
             }).join('<br>');
