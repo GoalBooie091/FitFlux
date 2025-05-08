@@ -121,14 +121,14 @@
     <div id="history" class="mt-8 space-y-4"></div>
 
     <script>
-      // function viewHistory() {
-      //   const history = document.getElementById('history');
-      //   history.innerHTML = '<h3 class="text-xl font-bold text-gray-800 mb-4">Balanced Diet History</h3>';
-      //   for (let day = 1; day <= 7; day++) {
-      //     const data = JSON.parse(localStorage.getItem(`balanced_day${day}`));
-      //     if (data) {
-      //       let mealDetails = Object.keys(data).map(meal => {
-      //         return `<strong>${meal}:</strong> ${data[meal]} servings/quantity`;
+      function viewHistory() {
+        const history = document.getElementById('history');
+        history.innerHTML = '<h3 class="text-xl font-bold text-gray-800 mb-4">Balanced Diet History</h3>';
+        for (let day = 1; day <= 7; day++) {
+          const data = JSON.parse(localStorage.getItem(`balanced_day${day}`));
+          if (data) {
+            let mealDetails = Object.keys(data).map(meal => {
+              return `<strong>${meal}:</strong> ${data[meal]} servings/quantity`;
             }).join('<br>');
 
             history.innerHTML += `<div class='bg-white p-4 rounded shadow'><strong>Day ${day}</strong>:<br>${mealDetails}</div>`;
@@ -141,11 +141,11 @@
   </section>
 
   <!-- CTA -->
-  <section class="text-center py-16 bg-indigo-600 text-white px-4">
+  <!-- <section class="text-center py-16 bg-indigo-600 text-white px-4">
     <h3 class="text-3xl font-bold mb-4">Track Your Balanced Diet for Optimal Health</h3>
     <p class="mb-6 text-lg">Ensure you are getting all the essential nutrients for a healthy lifestyle.</p>
     <a href="getstarted.html" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-100">Back to Dashboard</a>
-  </section>
+  </section> -->
 
   <!-- Footer -->
   <footer class="text-center py-6 text-gray-500 text-sm">
