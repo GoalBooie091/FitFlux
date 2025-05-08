@@ -80,10 +80,10 @@ Diet Info Section
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .diet-chart:hover {
+.diet-chart:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-} */
+}
 
 /* Footer Styling */
 footer {
