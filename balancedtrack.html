@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balanced Diet Tracker - FitFlux</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">FitFlux</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="text-gray-600 hover:text-indigo-600">Home</a>
+        <a href="contact.html" class="text-gray-600 hover:text-indigo-600">Contact</a>
+        <a href="aboutus.html" class="text-white bg-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-700">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <!-- <section class="text-center py-16 bg-indigo-100 px-4">
+    <h2 class="text-4xl font-bold text-indigo-700 mb-4">Balanced Diet Tracker</h2>
+    <p class="text-gray-700 max-w-2xl mx-auto text-lg">
+      Track your balanced meals daily to maintain a nutritious and well-rounded diet. -->
+    </p>
+  </section>
+
+  <!-- Day 1 to Day 7 Tracker -->
+  <section class="max-w-6xl mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Daily Balanced Diet Log</h3>
+
+    <!-- Day Blocks -->
+    <div id="tracker" class="space-y-12"></div>
+
+    <script>
+      const tracker = document.getElementById('tracker');
+      const balancedMeals = {
+        1: [
+          { name: "Grilled Chicken", description: "Grilled Chicken Breast with Veggies" },
+          { name: "Eggs and Bacon", description: "Scrambled Eggs with Bacon" },
+          { name: "Greek Yogurt with Berries", description: "Greek Yogurt with Berries" }
+        ],
+        2: [
+          { name: "Avocado Toast", description: "Avocado Toast with Poached Egg" },
+          { name: "Turkey Sandwich", description: "Turkey Sandwich on Whole Wheat" },
+          { name: "Sliced Vegetables", description: "Sliced Vegetables with Hummus" }
+        ],
+        3: [
+          { name: "Avocado Toast", description: "Avocado Toast with Eggs" },
+          { name: "Salmon", description: "Grilled Salmon with Spinach" },
+          { name: "Fruit and Nuts", description: "Fruit and Nuts for Snack" }
+        ],
+        4: [
+          { name: "Grilled Chicken Thighs", description: "Grilled Chicken Thighs with Broccoli" },
+          { name: "Vegetable Soup", description: "Vegetable Soup with Chickpeas" },
+          { name: "Quinoa Bowl", description: "Quinoa Bowl with Veggies" }
+        ],
+        5: [
+          { name: "Grilled Salmon", description: "Grilled Salmon with Asparagus" },
+          { name: "Greek Yogurt", description: "Greek Yogurt with Granola" },
+          { name: "Chicken Salad", description: "Chicken Salad with Mixed Greens" }
+        ],
+        6: [
+          { name: "Spinach", description: "Spinach and Sweet Potato Salad" },
+          { name: "Lentil Bowl", description: "Lentil Bowl with Avocado" }
+        ],
+        7: [
+          { name: "Shrimp Tacos", description: "Shrimp Tacos with Veggies" },
+          { name: "Quinoa Salad", description: "Quinoa Salad with Chickpeas" },
+          { name: "Fresh Fruit", description: "Fresh Fruit for Dessert" }
+        ]
+      };
+
+      // Generate the tracker sections for each day
+      for (let day = 1; day <= 7; day++) {
+        let mealsHTML = balancedMeals[day].map(meal => `
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium">${meal.name} - ${meal.description}</label>
+            <input type="text" id="balanced${day}_${meal.name}" class="w-full p-2 border rounded-lg" placeholder="Enter servings/quantity for ${meal.name}">
+          </div>
+        `).join('');
+
+        tracker.innerHTML += `
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h4 class="text-xl font-semibold text-indigo-700 mb-4">Day ${day}: Log Your Balanced Meals</h4>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-4">Balanced Meals</h5>
+              ${mealsHTML}
+            </div>
+          </div>
+          <div class="text-right mt-4">
+            <button onclick="saveBalanced(${day})" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Save Log</button>
+          </div>
+        </div>`;
+      }
+
+      function saveBalanced(day) {
+        const balancedData = {};
+        balancedMeals[day].forEach(meal => {
+          const value = document.getElementById(`balanced${day}_${meal.name}`).value;
+          if (value) balancedData[meal.name] = value;
+        });
+
+        if (Object.keys(balancedData).length > 0) {
+          localStorage.setItem(`balanced_day${day}`, JSON.stringify(balancedData));
+          alert(`Day ${day} balanced log saved!`);
+        } else {
+          alert("Please log your meals first.");
+        }
+      }
+    </script>
+
+    <!-- View History -->
+    <div class="text-center mt-12">
+      <button onclick="viewHistory()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">View History</button>
+    </div>
+
+    <div id="history" class="mt-8 space-y-4"></div>
+
+    <script>
+      function viewHistory() {
+        const history = document.getElementById('history');
+        history.innerHTML = '<h3 class="text-xl font-bold text-gray-800 mb-4">Balanced Diet History</h3>';
+        for (let day = 1; day <= 7; day++) {
+          const data = JSON.parse(localStorage.getItem(`balanced_day${day}`));
+          if (data) {
+            let mealDetails = Object.keys(data).map(meal => {
+              return `<strong>${meal}:</strong> ${data[meal]} servings/quantity`;
+            }).join('<br>');
+
+            history.innerHTML += `<div class='bg-white p-4 rounded shadow'><strong>Day ${day}</strong>:<br>${mealDetails}</div>`;
+          } else {
+            history.innerHTML += `<div class='bg-white p-4 rounded shadow'><strong>Day ${day}</strong>: No data recorded.</div>`;
+          }
+        }
+      }
+    </script>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center py-16 bg-indigo-600 text-white px-4">
+    <h3 class="text-3xl font-bold mb-4">Track Your Balanced Diet for Optimal Health</h3>
+    <p class="mb-6 text-lg">Ensure you are getting all the essential nutrients for a healthy lifestyle.</p>
+    <a href="getstarted.html" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-100">Back to Dashboard</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    © 2025 FitFlux. All rights reserved.
+  </footer>
+</body>
+</html>
