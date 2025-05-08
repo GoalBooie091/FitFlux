@@ -11,7 +11,7 @@
      /* Default font color */
 
 
-/* Background overlays to improve readability */
+Background overlays to improve readability
 body::before {
     content: "";
     position: fixed;
@@ -40,7 +40,7 @@ header p {
     color: #ddd;
 }
 
-/* Diet Info Section */
+/* Diet Info Section
 .diet-info {
     padding: 30px;
     margin: 20px auto;
@@ -50,7 +50,7 @@ header p {
     max-width: 1000px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+} */
 
 .diet-info h2 {
     color: #4CAF50;
