@@ -104,21 +104,21 @@
       //     if (value) balancedData[meal.name] = value;
         });
 
-      //   if (Object.keys(balancedData).length > 0) {
-      //     localStorage.setItem(`balanced_day${day}`, JSON.stringify(balancedData));
-      //     alert(`Day ${day} balanced log saved!`);
-      //   } else {
-      //     alert("Please log your meals first.");
-      //   }
-      // }
+        if (Object.keys(balancedData).length > 0) {
+          localStorage.setItem(`balanced_day${day}`, JSON.stringify(balancedData));
+          alert(`Day ${day} balanced log saved!`);
+        } else {
+          alert("Please log your meals first.");
+        }
+      }
     </script>
 
     <!-- View History -->
-    <div class="text-center mt-12">
+    <!-- <div class="text-center mt-12">
       <button onclick="viewHistory()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">View History</button>
     </div>
 
-    <div id="history" class="mt-8 space-y-4"></div>
+    <div id="history" class="mt-8 space-y-4"></div> -->
 
     <script>
       function viewHistory() {
