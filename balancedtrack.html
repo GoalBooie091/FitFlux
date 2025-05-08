@@ -6,7 +6,7 @@
   <title>Balanced Diet Tracker - FitFlux</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<!-- <body class="bg-gray-50 text-gray-800 font-sans"> -->
   <!-- Header -->
   <header class="bg-white shadow-md">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -97,8 +97,8 @@
         </div>`;
       }
 
-      function saveBalanced(day) {
-        const balancedData = {};
+       function saveBalanced(day) {
+         const balancedData = {};
         balancedMeals[day].forEach(meal => {
           const value = document.getElementById(`balanced${day}_${meal.name}`).value;
           if (value) balancedData[meal.name] = value;
